@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<html>
+    <head>
+        <style>
+          h1{
+            color:261C2C;
+          }
+        </style>
+        <title>{% block title %}じゃんけんしようぜ！{% endblock %}</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="shortcut icon" href="/static/favicon.ico">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    </body>
+</html>

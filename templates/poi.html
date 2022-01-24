@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %} {{super()}} | Game {% endblock %}
+
+{% block content %}
+<style>
+  body{
+  background-color: #F1E9E5;
+ }
+ h1 {
+  color:rgba(211, 60, 161, 0.555);
+}
+</style>
+
+<p>あなたが選んだのは: {{ player_choice }}</p>
+<p>CPが選んだのは: {{ computer_choice }}</p>
+
+
+{% if winner == 'あいこ' %}
+<h1>あいこでした！</h1>
+<h2>また挑戦してね～</h2>
+
+{% else %}
+<h1>{{ winner }} の勝ち！</h1>
+{% endif %}
+{% endblock %}

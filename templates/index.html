@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ super() }} | Home {% endblock %}
+
+{% block content %}
+<style>
+  h1 {
+  padding: .5em;
+  border-bottom: double 5px #FFC778;
+}
+
+body{
+  background-color: #F1E9E5;
+}
+
+li {
+    display: inline-block;
+}
+</style>
+
+
+<h1>じゃんけんを始めます</h1>
+<p>出す手を決めてください！（もし動かなかったら'/poi'の後に'/'から始まる自分の手を入力してネ！それでも動かなかったらゴメン！）</p>
+<p>例えば、出す手がグーだった場合は</p>
+<p>http://url/poi/rock　にしてね！</p>
+<h2>出す手を決めてコンピューターと対戦しよう！</h2>
+
+<class="flex">
+  <ul>
+    <div>
+      <li><image src="/static/images/janken_choki.png" alt="choki"></image>
+      <p><a href="{{ url_for('poi', choice='チョキ') }}">チョキ</a></p></li>
+    </div>
+    <div>
+      <li><image src="/static/images/janken_gu.png" alt="gu"></image>
+      <p><a href="{{ url_for('poi', choice='グー') }}">グー</a></p></li>
+    </div>
+    <div>
+      <li><image src="/static/images/janken_pa.png" alt="pa"></image>
+      <p><a href="{{ url_for('poi', choice='パー') }}">パー</a></p></li>
+    </div>
+  </ul>
+</class>
+{% endblock %}
